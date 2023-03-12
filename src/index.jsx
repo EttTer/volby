@@ -14,6 +14,12 @@ const App = () => {
     { name: "Lubomír Poňuchálek", avatar: '/assets/candidate04.png' },
   ]), []);
   
+
+ 
+  const handleVote = (name) => {
+    setPresident(name);
+  };
+
   return (
     <div className="container">
       <div className="castle">
@@ -35,6 +41,7 @@ const App = () => {
             key={c.name}
             name={c.name} 
             avatar={c.avatar} 
+            onVote={handleVote}
           />
         ))}
       </div>
